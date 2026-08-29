@@ -1,20 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { games } from './data';
 import './index.css';
 
 // ─── Animation variants ───────────────────────────────────────
-const fadeUp = {
+const easeCurve = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeCurve } },
 };
-const fadeRight = {
+const fadeRight: Variants = {
   hidden: { opacity: 0, x: -70 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: easeCurve } },
 };
-const fadeLeft = {
+const fadeLeft: Variants = {
   hidden: { opacity: 0, x: 70 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: easeCurve } },
 };
 const viewport = { once: true, amount: 0.2 };
 
@@ -93,7 +95,7 @@ function GameSection({ game, index }: { game: typeof games[0]; index: number }) 
             <div className="h-px w-16" style={{ background: game.accentColor }} />
 
             <p className="text-zinc-300 leading-relaxed text-base max-w-md">
-              {game.description}
+              {game.fullDescription[0]}
             </p>
 
             <div className="flex items-center gap-4 p-3 border rounded-lg" style={{ borderColor: game.accentColor + '33', background: game.accentDim }}>
@@ -177,7 +179,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.2, ease: easeCurve }}
           className="text-center px-4"
         >
           <h1
