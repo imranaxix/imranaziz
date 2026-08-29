@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,600;0,14..32,800;1,14..32,400&family=Teko:wght@500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Teko', sans-serif;
+  --color-brand: #ff4d4d;
+  --color-brand-dim: rgba(255, 77, 77, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* ─── Noise Grain Overlay ─── */
+.noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  opacity: 0.35;
+}
+
+/* ─── Hero text gradient animation ─── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #fff 30%, #ff4d4d 50%, #fff 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+/* ─── Glitch effect for horror game headings ─── */
+@keyframes glitch-1 {
+  0%,100% { transform: translate(0); clip-path: inset(0 0 100% 0); }
+  10% { transform: translate(-4px, 2px); clip-path: inset(20% 0 60% 0); }
+  20% { transform: translate(4px, -2px); clip-path: inset(50% 0 30% 0); }
+  30% { transform: translate(-4px, 0); clip-path: inset(70% 0 10% 0); }
+  40% { transform: translate(0); clip-path: inset(0 0 100% 0); }
+}
+
+@keyframes glitch-2 {
+  0%,100% { transform: translate(0); clip-path: inset(100% 0 0% 0); opacity: 0; }
+  15% { transform: translate(4px, 0); clip-path: inset(10% 0 80% 0); opacity: 0.7; }
+  25% { transform: translate(-4px, 2px); clip-path: inset(40% 0 50% 0); opacity: 0.6; }
+  35% { transform: translate(0); clip-path: inset(80% 0 10% 0); opacity: 0.5; }
+  45% { opacity: 0; }
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.glitch:hover::before {
+  color: #ff4d4d;
+  animation: glitch-1 0.5s steps(1) 1;
+}
+
+.glitch:hover::after {
+  color: #00ffff;
+  animation: glitch-2 0.5s steps(1) 1;
+}
+
+/* ─── Tag pill ─── */
+.tag {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ─── Scroll indicator ─── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+}
+
+.scroll-dot {
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+/* ─── Image hover lift ─── */
+.img-lift {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.7s ease;
+}
+.img-lift:hover {
+  transform: translateY(-8px) rotate(-1deg) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* ─── CTA button ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-red {
+  background: #ff4d4d;
+  color: #fff;
+  border-color: #ff4d4d;
+}
+
+.btn-red:hover {
+  background: transparent;
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+.btn-yellow {
+  background: #ffd54a;
+  color: #000;
+  border-color: #ffd54a;
+}
+
+.btn-yellow:hover {
+  background: transparent;
+  color: #ffd54a;
+  border-color: #ffd54a;
+}
+
+
