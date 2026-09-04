@@ -236,7 +236,7 @@ export default function GameDetail() {
                   ))}
                 </div>
 
-                <div className="mt-6 w-full flex justify-center">
+                <div className="mt-6 flex flex-col gap-4 w-full items-center">
                   <iframe 
                     frameBorder="0" 
                     src={`https://itch.io/embed/${game.widgetId}?bg_color=18181b&fg_color=ffffff&link_color=${game.accentColor.replace('#', '')}&border_color=27272a`} 

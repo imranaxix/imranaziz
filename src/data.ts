@@ -1,57 +1,5 @@
 export const games = [
   {
-    id: 'bride',
-    slug: 'bride-of-karsaz',
-    title: 'BRIDE OF KARSAZ',
-    tagline: "Keep driving. Don't look back.",
-    fullDescription: [
-      "Bride of Karsaz is a short horror game based on a terrifying night drive that goes horribly wrong.",
-      "After years of living abroad, you return home for a cousin's wedding. Exhausted from travel and overwhelmed by the crowded, noisy house, you just want a place to sleep. You decide to head to one of your cousin's apartments nearby, leaving the chaos behind.",
-      "You take the wheel at 3:00 AM. But the dark, quiet streets feel wrong. A few wrong turns later, you find yourself on a road called Karsaz."
-    ],
-    features: [
-      "~8–10 minutes of gameplay",
-      "Atmospheric driving and exploration",
-      "Based on the famous Karsaz urban legend",
-      "Anomaly Mode coming soon for extra replayability"
-    ],
-    note: "This game was made in one week",
-    comingSoon: "🚨 Anomaly Mode — Coming Soon! Stay tuned for extra scares and replayability.",
-    tags: ['Horror', 'Driving', 'First-Person', 'Atmospheric', 'Psychological Horror', 'Short'],
-    genre: 'Adventure',
-    status: 'Released',
-    platforms: ['Windows'],
-    rating: '4.4',
-    ratingCount: 7,
-    platform: 'Windows · Free',
-    url: 'https://imranaziz.itch.io/bride-of-karsaz',
-    widgetId: '4842246',
-    cta: 'Play Free',
-    coverUrl: 'https://img.itch.zone/aW1nLzI4OTE4MTkxLnBuZw==/original/rtwZU2.png',
-    profilePic: 'https://img.itch.zone/aW1nLzI4OTE1MzE0LnBuZw==/original/dXZ%2B3e.png',
-    screenshotUrl: 'https://img.itch.zone/aW1nLzI4OTE4MTMwLnBuZw==/original/8CATPa.png',
-    accentColor: '#ff4d4d',
-    accentDim: 'rgba(255,77,77,0.12)',
-    btnClass: 'btn-red',
-    textClass: 'text-red-400',
-    borderClass: 'border-red-500/30',
-    youtubeId: '8Usv6MoA9Ts',
-    controls: [
-      { key: 'WASD', action: 'Move / Drive' },
-      { key: 'E', action: 'Pick / Drop Item' },
-      { key: 'Left Click', action: 'Interact / Throw Item' },
-      { key: 'CTRL', action: 'Crouch' },
-      { key: 'ESC', action: 'Pause / Resume' }
-    ],
-    screenshots: [
-      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzI3NC5naWY=/original/lYCOiw.gif',
-      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzMzMC5naWY=/original/%2FwyrJi.gif',
-      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzQ1Ny5naWY=/original/hdoTsh.gif',
-      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzM5MC5naWY=/original/0v5rM6.gif',
-      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzI5Ny5naWY=/original/Yb9H2s.gif'
-    ]
-  },
-  {
     id: 'hotdog',
     slug: 'hotdogkiller',
     title: 'HOTDOG KILLER',
@@ -78,6 +26,7 @@ export const games = [
     platform: 'Windows · $6.00',
     url: 'https://imranaziz.itch.io/hotdogkiller',
     widgetId: '4712956',
+    steamWidgetId: '5157060',
     cta: 'Buy Now — $6',
     coverUrl: 'https://img.itch.zone/aW1nLzI4MDg2NDIyLnBuZw==/original/IVHjtq.png',
     profilePic: 'https://img.itch.zone/aW1nLzI4NDU5MzMxLmpwZw==/original/1a0ylr.jpg',
@@ -101,6 +50,59 @@ export const games = [
       'https://img.itch.zone/aW1hZ2UvNDcxMjk1Ni8yODA5OTk5My5naWY=/original/C5GkZb.gif',
       'https://img.itch.zone/aW1hZ2UvNDcxMjk1Ni8yODA5OTU5OC5naWY=/original/2KKBIL.gif',
       'https://img.itch.zone/aW1hZ2UvNDcxMjk1Ni8yODA5OTcxMS5naWY=/original/UkppDU.gif'
+    ]
+  },
+  {
+    id: 'bride',
+    slug: 'bride-of-karsaz',
+    title: 'BRIDE OF KARSAZ',
+    tagline: "Keep driving. Don't look back.",
+    fullDescription: [
+      "Bride of Karsaz is a short horror game based on a terrifying night drive that goes horribly wrong.",
+      "After years of living abroad, you return home for a cousin's wedding. Exhausted from travel and overwhelmed by the crowded, noisy house, you just want a place to sleep. You decide to head to one of your cousin's apartments nearby, leaving the chaos behind.",
+      "You take the wheel at 3:00 AM. But the dark, quiet streets feel wrong. A few wrong turns later, you find yourself on a road called Karsaz."
+    ],
+    features: [
+      "~8–10 minutes of gameplay",
+      "Atmospheric driving and exploration",
+      "Based on the famous Karsaz urban legend",
+      "Anomaly Mode coming soon for extra replayability"
+    ],
+    note: "This game was made in one week",
+    comingSoon: "🚨 Anomaly Mode — Coming Soon! Stay tuned for extra scares and replayability.",
+    tags: ['Horror', 'Driving', 'First-Person', 'Atmospheric', 'Psychological Horror', 'Short'],
+    genre: 'Adventure',
+    status: 'Released',
+    platforms: ['Windows'],
+    rating: '4.4',
+    ratingCount: 7,
+    platform: 'Windows · Free',
+    url: 'https://imranaziz.itch.io/bride-of-karsaz',
+    widgetId: '4842246',
+    steamWidgetId: null,
+    cta: 'Play Free',
+    coverUrl: 'https://img.itch.zone/aW1nLzI4OTE4MTkxLnBuZw==/original/rtwZU2.png',
+    profilePic: 'https://img.itch.zone/aW1nLzI4OTE1MzE0LnBuZw==/original/dXZ%2B3e.png',
+    screenshotUrl: 'https://img.itch.zone/aW1nLzI4OTE4MTMwLnBuZw==/original/8CATPa.png',
+    accentColor: '#ff4d4d',
+    accentDim: 'rgba(255,77,77,0.12)',
+    btnClass: 'btn-red',
+    textClass: 'text-red-400',
+    borderClass: 'border-red-500/30',
+    youtubeId: '8Usv6MoA9Ts',
+    controls: [
+      { key: 'WASD', action: 'Move / Drive' },
+      { key: 'E', action: 'Pick / Drop Item' },
+      { key: 'Left Click', action: 'Interact / Throw Item' },
+      { key: 'CTRL', action: 'Crouch' },
+      { key: 'ESC', action: 'Pause / Resume' }
+    ],
+    screenshots: [
+      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzI3NC5naWY=/original/lYCOiw.gif',
+      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzMzMC5naWY=/original/%2FwyrJi.gif',
+      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzQ1Ny5naWY=/original/hdoTsh.gif',
+      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzM5MC5naWY=/original/0v5rM6.gif',
+      'https://img.itch.zone/aW1hZ2UvNDg0MjI0Ni8yODkxNzI5Ny5naWY=/original/Yb9H2s.gif'
     ]
   }
 ];

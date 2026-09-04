@@ -105,14 +105,28 @@ function GameSection({ game, index }: { game: typeof games[0]; index: number }) 
               <span className="ml-auto text-zinc-400 text-xs font-semibold tracking-wider uppercase">{game.platform}</span>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-6">
-              <a href={game.url} target="_blank" rel="noreferrer" className={`btn ${game.btnClass}`}>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" /></svg>
-                {game.cta}
-              </a>
-              <Link to={`/game/${game.slug}`} className="btn border border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border-zinc-500 transition-colors">
-                View Details
-              </Link>
+            <div className="flex flex-col gap-6 mt-6">
+              <div className="flex flex-wrap gap-4">
+                <a href={game.url} target="_blank" rel="noreferrer" className={`btn ${game.btnClass}`}>
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" /></svg>
+                  {game.cta}
+                </a>
+                <Link to={`/game/${game.slug}`} className="btn border border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border-zinc-500 transition-colors">
+                  View Details
+                </Link>
+              </div>
+              
+              {game.steamWidgetId && (
+                <div className="w-full max-w-[646px]">
+                  <iframe 
+                    src={`https://store.steampowered.com/widget/${game.steamWidgetId}/`} 
+                    frameBorder="0" 
+                    width="100%" 
+                    height="190"
+                    className="rounded-lg shadow-xl border border-zinc-800"
+                  ></iframe>
+                </div>
+              )}
             </div>
           </motion.div>
 
